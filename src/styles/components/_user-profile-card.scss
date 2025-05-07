@@ -41,8 +41,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: -$spacing-200;
-  padding-top: $spacing-200 + $spacing-300;
   padding: $spacing-300;
+  padding-top: calc($spacing-200 + $spacing-300);
   &:active {
     color: $c-white;
   }
