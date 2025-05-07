@@ -1,0 +1,49 @@
+@use "../settings" as *;
+
+.user-profile-card {
+  width: 100%;
+}
+
+.user-profile-card__header {
+  align-items: center;
+  background-color: $c-purple-600;
+  border-radius: $border-radius-md;
+  display: flex;
+  gap: $spacing-300;
+  justify-content: center;
+  padding: $spacing-400;
+  position: relative;
+  z-index: 2;
+}
+
+.user-profile-card__avatar {
+  border-radius: 50%;
+  border: solid 4px $c-white;
+  height: 72px;
+  width: 72px;
+}
+
+.user-profile-card__label {
+  @include text-preset-6;
+  color: $c-navy-200;
+}
+
+.user-profile-card__name {
+  @include text-preset-4;
+  color: $c-white;
+  margin-top: $spacing-100;
+}
+
+.user-profile-card__timeframe-selector {
+  background-color: $c-navy-900;
+  border-bottom-left-radius: $border-radius-md;
+  border-bottom-right-radius: $border-radius-md;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -$spacing-200;
+  padding-top: $spacing-200 + $spacing-300;
+  padding: $spacing-300;
+  &:active {
+    color: $c-white;
+  }
+}
