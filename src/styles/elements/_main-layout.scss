@@ -1,3 +1,11 @@
+@use "../settings" as *;
+
 .main-layout {
   width: 87.2%;
+  @media (min-width: $breakpoint-sm) {
+    max-width: $main-layout-tablet-width;
+  }
+  @media (min-width: $breakpoint-lg) {
+    max-width: $main-layout-desktop-width;
+  }
 }
