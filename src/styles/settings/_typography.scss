@@ -1,17 +1,18 @@
 @use "./breakpoints" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-$font-family-body: "Roboto", sans-serif;
-$font-family-heading: "Roboto", sans-serif;
+$font-family-body: "Rubik", sans-serif;
+$font-family-heading: "Rubik", sans-serif;
 
 $font-size-xs: 12px;
 $font-size-sm: 14px;
-$font-size-md: 16px;
+$font-size-md: 15px;
 $font-size-lg: 18px;
 $font-size-xl: 24px;
-$font-size-2xl: 40px;
-$font-size-3xl: 56px;
+$font-size-2xl: 32px;
+$font-size-3xl: 40px;
+$font-size-4xl: 56px;
 
 @mixin text-preset(
   $font-size,
@@ -30,20 +31,29 @@ $font-size-3xl: 56px;
 }
 
 @mixin text-preset-1 {
-  @include text-preset($font-size-2xl, $font-family-heading, 700, 1);
-  @media (min-width: $breakpoint-sm) {
-    @include text-preset($font-size-3xl, $font-family-heading, 700, 1.1);
-  }
+  @include text-preset($font-size-4xl, $font-family-heading, 300, 1.2);
 }
 
-@mixin text-preset-2-bold {
-  @include text-preset($font-size-md, $font-family-heading, 700, 1.5);
-}
-
-@mixin text-preset-2-regular {
-  @include text-preset($font-size-md, $font-family-heading, 400, 1.5);
+@mixin text-preset-2 {
+  @include text-preset($font-size-3XL, $font-family-body, 300, 1.2);
 }
 
 @mixin text-preset-3 {
-  @include text-preset($font-size-xs, $font-family-heading, 400, 1.5);
+  @include text-preset($font-size-2xl, $font-family-body, 300, 1.2);
+}
+
+@mixin text-preset-4 {
+  @include text-preset($font-size-xl, $font-family-body, 300, 1.15);
+}
+
+@mixin text-preset-5-medium {
+  @include text-preset($font-size-lg, $font-family-body, 500, 1.15);
+}
+
+@mixin text-preset-5-regular {
+  @include text-preset($font-size-lg, $font-family-body, 400, 1.15);
+}
+
+@mixin text-preset-6 {
+  @include text-preset($font-size-md, $font-family-body, 400, 1.2);
 }
