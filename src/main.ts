@@ -1,6 +1,9 @@
-// import "./styles.css";
+import "./styles.scss";
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-<h1>Vite + TypeScript + Tailwind CSS</h1>  
+import { renderMainLayout } from "./components/MainLayout";
 
-`;
+const app = document.querySelector<HTMLDivElement>("#app");
+
+if (app) {
+  app.appendChild(renderMainLayout());
+}
