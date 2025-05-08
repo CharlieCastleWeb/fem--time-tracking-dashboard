@@ -1,8 +1,13 @@
+import { renderTimeCard } from "./TimeCardComponent";
 import { renderUserProfileCard } from "./UserProfileCard";
 
 export function renderMainLayout(): HTMLElement {
-  const container = document.createElement("section");
-  container.classList.add("main-layout");
-  container.append(renderUserProfileCard());
-  return container;
+  const main = document.createElement("main");
+  const activityDashboard = document.createElement("section");
+  main.classList.add("main-layout");
+  activityDashboard.classList.add("activity-dashboard");
+  activityDashboard.append(renderTimeCard());
+  main.append(renderUserProfileCard());
+  main.append(activityDashboard);
+  return main;
 }
