@@ -1,0 +1,61 @@
+@use "../settings" as *;
+
+.activity-card {
+  background-color: $c-orange-300;
+  border-radius: $border-radius-md $border-radius-md $border-radius-xl
+    $border-radius-xl;
+  padding-top: $spacing-500;
+}
+
+.activity-card__body {
+  background-color: $c-navy-900;
+  border-radius: $border-radius-md;
+  padding: $spacing-300;
+}
+
+.activity-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $spacing-50;
+}
+
+.activity-card__title {
+  @include text-preset-5-medium;
+  color: $c-white;
+}
+
+.activity-card__menu-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  padding: 0;
+  width: $spacing-200;
+  height: $spacing-200;
+}
+
+.activity-card__menu-icon {
+}
+
+.activity-card__times {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $spacing-100;
+}
+
+.activity-card__current-time {
+  @include text-preset-3;
+  color: $c-white;
+}
+
+.activity-card__current-hours {
+  // @include text-preset-3;
+  // color: $c-white;
+}
+
+.activity-card__previous-time {
+  @include text-preset-6;
+  color: $c-navy-200;
+}
