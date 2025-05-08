@@ -2,12 +2,18 @@
 
 .activity-card {
   background-color: $c-orange-300;
+  background-image: url("public/images/icon-work.svg");
+  background-position: 93% -12%;
+  background-repeat: no-repeat;
   border-radius: $border-radius-md $border-radius-md $border-radius-xl
     $border-radius-xl;
   padding-top: $spacing-500;
-  background-image: url("public/images/icon-work.svg");
-  background-repeat: no-repeat;
-  background-position: 93% -12%;
+  @media (min-width: $breakpoint-sm) {
+    background-position: 93% -5%;
+    background-size: 32%;
+    max-width: $activity-card-max-width;
+    padding-top: $spacing-400;
+  }
 }
 
 .activity-card__body {
@@ -17,9 +23,9 @@
 }
 
 .activity-card__header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: $spacing-50;
 }
 
@@ -33,29 +39,32 @@
   border: none;
   cursor: pointer;
   font-size: $font-size-lg;
+  height: $spacing-200;
   padding: 0;
   width: $spacing-200;
-  height: $spacing-200;
 }
 
 .activity-card__menu-icon {
 }
 
 .activity-card__times {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: $spacing-100;
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: column;
+    gap: $spacing-100;
+  }
 }
 
 .activity-card__current-time {
   @include text-preset-3;
   color: $c-white;
-}
-
-.activity-card__current-hours {
-  // @include text-preset-3;
-  // color: $c-white;
+  @media (min-width: $breakpoint-sm) {
+    @include text-preset-1;
+    align-items: start;
+  }
 }
 
 .activity-card__previous-time {
