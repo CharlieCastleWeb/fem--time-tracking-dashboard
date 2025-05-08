@@ -5,6 +5,9 @@
   border-radius: $border-radius-md $border-radius-md $border-radius-xl
     $border-radius-xl;
   padding-top: $spacing-500;
+  background-image: url("public/images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: 93% -12%;
 }
 
 .activity-card__body {
