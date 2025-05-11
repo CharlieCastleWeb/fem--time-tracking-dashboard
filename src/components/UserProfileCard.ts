@@ -1,3 +1,10 @@
+import { setViewMode } from "../store/viewMode";
+
+// function handleClick(mode: "daily" | "weekly" | "monthly") {
+//   console.log(`Button clicked: ${mode}`);
+//   setViewMode(mode);
+// }
+
 export function renderUserProfileCard(): HTMLElement {
   const container = document.createElement("div");
   container.classList.add("user-profile-card");
@@ -10,11 +17,22 @@ export function renderUserProfileCard(): HTMLElement {
       </div>
     </div>
     <div class="user-profile-card__timeframe-selector">
-      <button class="user-profile-card__button">Daily</button>
-      <button class="user-profile-card__button">Weekly</button>
-      <button class="user-profile-card__button">Monthly</button>
+      <button class="user-profile-card__button" data-mode="daily">Daily</button>
+      <button class="user-profile-card__button" data-mode="weekly">Weekly</button>
+      <button class="user-profile-card__button" data-mode="monthly">Monthly</button>
     </div>
   `;
+
+  container.querySelectorAll(".user-profile-card__button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const mode = btn.getAttribute("data-mode") as
+        | "daily"
+        | "weekly"
+        | "monthly";
+      console.log(`Button clicked: ${mode}`);
+      setViewMode(mode);
+    });
+  });
 
   return container;
 }

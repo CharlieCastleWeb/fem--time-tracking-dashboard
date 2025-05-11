@@ -1,11 +1,15 @@
 @use "../settings" as *;
 
 .main-layout {
-  width: 87.2%;
+  margin-top: $spacing-1000;
+  margin-bottom: $spacing-1000;
+  // width: 87.2%;
   @media (min-width: $breakpoint-sm) {
-    max-width: $main-layout-tablet-width;
+    margin: auto auto;
+    padding: 0 $spacing-200;
   }
   @media (min-width: $breakpoint-lg) {
-    max-width: $main-layout-desktop-width;
+    // max-width: $main-layout-desktop-width;
+    display: flex;
   }
 }

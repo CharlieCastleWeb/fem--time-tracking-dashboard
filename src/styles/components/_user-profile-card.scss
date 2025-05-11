@@ -2,6 +2,9 @@
 
 .user-profile-card {
   width: 100%;
+  @media (min-width: $breakpoint-lg) {
+    max-width: $user-profile-card-layout-desktop-max-width;
+  }
 }
 
 .user-profile-card__header {
@@ -49,6 +52,7 @@
   border-bottom-left-radius: $border-radius-md;
   border-bottom-right-radius: $border-radius-md;
   display: flex;
+  gap: $spacing-300;
   justify-content: center;
   margin-top: -$spacing-200;
   padding: $spacing-300;

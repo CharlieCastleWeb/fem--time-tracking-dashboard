@@ -1,10 +1,13 @@
-export function renderTimeCard(): HTMLElement {
+import type { Activity } from "../interfaces/activity.interface";
+import { renderTimes } from "./Times";
+
+export function renderTimeCard(activity: Activity): HTMLElement {
   const container = document.createElement("div");
   container.classList.add("activity-card");
   container.innerHTML = `
     <div class="activity-card__body">
       <div class="activity-card__header">
-        <h2 class="activity-card__title">Work</h2>
+        <h2 class="activity-card__title">${activity.title}</h2>
         <button class="activity-card__menu-button">
           <img
             src="/public/images/icon-ellipsis.svg"
@@ -13,19 +16,11 @@ export function renderTimeCard(): HTMLElement {
           />
         </button>
       </div>
-      <div class="activity-card__times">
-        <div class="activity-card__current-time">
-          <span class="activity-card__current-hours">32</span
-          ><span class="activity-card__unit">hrs</span>
-        </div>
-        <div class="activity-card__previous-time">
-          <span class="activity-card__label">Last week -</span>
-          <span class="activity-card__hours">36</span>
-          <span class="activity-card__unit">hrs</span>
-        </div>
-      </div>
     </div>
-    
   `;
+
+  container
+    .querySelector(".activity-card__body")
+    ?.append(renderTimes(activity.timeframes));
   return container;
 }
