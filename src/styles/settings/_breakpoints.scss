@@ -1,7 +1,7 @@
 @use "../settings/spacing" as *;
 
-$breakpoint-sm: 640px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 880px;
+$breakpoint-sm: calc(640px + $spacing-200 + $spacing-200);
+$breakpoint-md: calc(768px + $spacing-200 + $spacing-200);
+$breakpoint-lg: calc(880px + $spacing-200 + $spacing-200);
 $breakpoint-xl: 1280px;
 $breakpoint-2xl: 1536px;

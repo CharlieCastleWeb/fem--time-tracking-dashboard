@@ -1,0 +1,15 @@
+@use "../settings" as *;
+
+.activity-dashboard {
+  margin-top: $spacing-300;
+  display: grid;
+  gap: $spacing-300;
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: $breakpoint-lg) {
+    margin-top: 0;
+    margin-left: $spacing-300;
+  }
+  // grid-template-columns: repeat(3, 1fr);
+}

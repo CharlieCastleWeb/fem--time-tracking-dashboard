@@ -1,13 +1,12 @@
-import { renderTimeCard } from "./TimeCardComponent";
 import { renderUserProfileCard } from "./UserProfileCard";
 
-export function renderMainLayout(): HTMLElement {
+import { renderActivityDashboard } from "./ActivityDashboard";
+import type { Activity } from "../interfaces/activity.interface";
+
+export function renderMainLayout(data: Activity[]): HTMLElement {
   const main = document.createElement("main");
-  const activityDashboard = document.createElement("section");
   main.classList.add("main-layout");
-  activityDashboard.classList.add("activity-dashboard");
-  activityDashboard.append(renderTimeCard());
   main.append(renderUserProfileCard());
-  main.append(activityDashboard);
+  main.append(renderActivityDashboard(data));
   return main;
 }
