@@ -1,8 +1,6 @@
 @use "../settings" as *;
 
 .activity-card {
-  background-color: $c-orange-300;
-  background-image: url("public/images/icon-work.svg");
   background-position: 93% -12%;
   background-repeat: no-repeat;
   border-radius: $border-radius-md $border-radius-md $border-radius-xl
@@ -14,6 +12,36 @@
     max-width: $activity-card-max-width;
     padding-top: $spacing-400;
   }
+}
+
+.activity-card--work {
+  background-image: url("public/images/icon-work.svg");
+  background-color: $c-orange-300;
+}
+
+.activity-card--play {
+  background-image: url("public/images/icon-play.svg");
+  background-color: $c-blue-300;
+}
+
+.activity-card--study {
+  background-image: url("public/images/icon-study.svg");
+  background-color: $c-pink-400;
+}
+
+.activity-card--exercise {
+  background-image: url("public/images/icon-exercise.svg");
+  background-color: $c-green-400;
+}
+
+.activity-card--social {
+  background-image: url("public/images/icon-social.svg");
+  background-color: $c-purple-700;
+}
+
+.activity-card--self-care {
+  background-image: url("public/images/icon-self-care.svg");
+  background-color: $c-yellow-300;
 }
 
 .activity-card__body {
