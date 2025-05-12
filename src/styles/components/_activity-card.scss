@@ -9,8 +9,11 @@
   @media (min-width: $breakpoint-sm) {
     background-position: 93% -5%;
     background-size: 32%;
-    max-width: $activity-card-max-width;
+    width: $activity-card-desktop-max-width;
     padding-top: $spacing-400;
+  }
+  @media (min-width: $breakpoint-lg) {
+    width: $activity-card-desktop-max-width;
   }
 }
 
